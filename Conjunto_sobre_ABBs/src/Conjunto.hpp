@@ -18,7 +18,7 @@ void Conjunto<T>::destruccionRecursiva(Nodo* actual) {
 
 template <class T>
 bool Conjunto<T>::pertenece(const T& clave) const {
-    bool res, menor = false;
+    bool menor = false;
     Nodo* act = _raiz;
     while (act != nullptr){
         if (act->valor == clave){
@@ -27,14 +27,11 @@ bool Conjunto<T>::pertenece(const T& clave) const {
         menor = clave < act->valor;
         act = menor ? act->izq : act->der;
     }
-    return res;
+    return false;
 }
 
 template <class T>
 void Conjunto<T>::insertar(const T& clave) {
-    if (pertenece(clave)){
-        return;
-    }
     Nodo* act;
     if (_raiz == nullptr){
         _raiz = new Nodo(clave, nullptr);
@@ -44,6 +41,7 @@ void Conjunto<T>::insertar(const T& clave) {
     bool menor = false;
     Nodo* hijo;
     while (act != nullptr){
+        if (act->valor == clave){ return;}
         menor = clave < act->valor;
         hijo = new Nodo(clave, act);
         act = menor ? act->izq : act->der;
@@ -112,19 +110,19 @@ void Conjunto<T>::remover(const T& clave) {
 template <class T>
 const T& Conjunto<T>::siguiente(const T& clave) {
     _siguiente = nullptr;
-    Nodo* nodo = _raiz;
-    _inorder_tree_walk_search_next(nodo, clave);
+    _inorder_tree_walk_search_next(_raiz, clave);
     return *_siguiente;
+    delete _siguiente;
 
 }
 
 template <class T>
 void Conjunto<T>::_inorder_tree_walk_search_next(Nodo* nodo, const T& clave) {
-    //de Cormen
+    //de Cormen's
     if(nodo != nullptr){
         _inorder_tree_walk_search_next(nodo->izq, clave);
         if(_siguiente == nullptr && (nodo->valor > clave)){
-            _siguiente = new T(nodo->valor);
+            _siguiente = &nodo->valor;
             return;
         }
         _inorder_tree_walk_search_next(nodo->der, clave);
