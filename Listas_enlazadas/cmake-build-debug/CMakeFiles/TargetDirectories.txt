@@ -1,0 +1,6 @@
+/home/leobrasileo/Desktop/UBA/Algo 2/labos/AyED2-Labo05-Listas_enlazadas/cmake-build-debug/CMakeFiles/gtest.dir
+/home/leobrasileo/Desktop/UBA/Algo 2/labos/AyED2-Labo05-Listas_enlazadas/cmake-build-debug/CMakeFiles/gtest_main.dir
+/home/leobrasileo/Desktop/UBA/Algo 2/labos/AyED2-Labo05-Listas_enlazadas/cmake-build-debug/CMakeFiles/correrTests.dir
+/home/leobrasileo/Desktop/UBA/Algo 2/labos/AyED2-Labo05-Listas_enlazadas/cmake-build-debug/CMakeFiles/correrValgrind.dir
+/home/leobrasileo/Desktop/UBA/Algo 2/labos/AyED2-Labo05-Listas_enlazadas/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/leobrasileo/Desktop/UBA/Algo 2/labos/AyED2-Labo05-Listas_enlazadas/cmake-build-debug/CMakeFiles/rebuild_cache.dir
