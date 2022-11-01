@@ -1,1 +1,0 @@
-/usr/bin/c++  -pthread -std=gnu++11 -ggdb3 -g -g "CMakeFiles/correrTests.dir/tests/conjunto-tests.cpp.o" -o correrTests  libgtest.a libgtest_main.a 

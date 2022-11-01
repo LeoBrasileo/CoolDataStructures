@@ -1,7 +1,0 @@
-/home/leobrasileo/Documents/c++ stuff/CoolDataStructures/Trie/cmake-build-debug/CMakeFiles/gtest.dir
-/home/leobrasileo/Documents/c++ stuff/CoolDataStructures/Trie/cmake-build-debug/CMakeFiles/gtest_main.dir
-/home/leobrasileo/Documents/c++ stuff/CoolDataStructures/Trie/cmake-build-debug/CMakeFiles/correrTests.dir
-/home/leobrasileo/Documents/c++ stuff/CoolDataStructures/Trie/cmake-build-debug/CMakeFiles/correrTests_ext.dir
-/home/leobrasileo/Documents/c++ stuff/CoolDataStructures/Trie/cmake-build-debug/CMakeFiles/correrValgrind.dir
-/home/leobrasileo/Documents/c++ stuff/CoolDataStructures/Trie/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/leobrasileo/Documents/c++ stuff/CoolDataStructures/Trie/cmake-build-debug/CMakeFiles/rebuild_cache.dir
