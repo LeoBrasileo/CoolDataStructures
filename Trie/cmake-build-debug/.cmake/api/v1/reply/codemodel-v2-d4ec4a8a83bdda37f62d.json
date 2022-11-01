@@ -1,0 +1,96 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "taller_trie",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "correrTests::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-correrTests-Debug-44d91f2ccff0947c05d7.json",
+					"name" : "correrTests",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "correrTests_ext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-correrTests_ext-Debug-a090c4fee572140a8b5a.json",
+					"name" : "correrTests_ext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "correrValgrind::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-correrValgrind-Debug-948138b53af8c7b92cc3.json",
+					"name" : "correrValgrind",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "gtest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-gtest-Debug-96211669a9c9bfd51e05.json",
+					"name" : "gtest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "gtest_main::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-gtest_main-Debug-9f628e0d6bd1d7f313bd.json",
+					"name" : "gtest_main",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/leobrasileo/Documents/c++ stuff/CoolDataStructures/Trie/cmake-build-debug",
+		"source" : "/home/leobrasileo/Documents/c++ stuff/CoolDataStructures/Trie"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

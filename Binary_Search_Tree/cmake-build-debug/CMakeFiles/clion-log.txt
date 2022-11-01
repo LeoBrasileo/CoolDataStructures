@@ -1,0 +1,4 @@
+/snap/clion/209/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S "/home/leobrasileo/Documents/c++ stuff/CoolDataStructures/Binary_Search_Tree" -B "/home/leobrasileo/Documents/c++ stuff/CoolDataStructures/Binary_Search_Tree/cmake-build-debug"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/leobrasileo/Documents/c++ stuff/CoolDataStructures/Binary_Search_Tree/cmake-build-debug
