@@ -1,65 +1,59 @@
 #include "gtest-1.8.1/gtest.h"
-#include "../src/Lista.h"
+#include "../src/List.h"
 
-/**
- * Para correr valgrind:
- * - Seleccionar arriba a la derecha la opción "correrValgrind"
- * - Hacer build del proyecto (Ctrl+F9)
- */
-
-TEST(lista_test, test_constructor_vacio) {
-    Lista l;
-    ASSERT_EQ(l.longitud(), 0);
+TEST(lista_test, empty_constructor_test) {
+    List l;
+    ASSERT_EQ(l.length(), 0);
 }
 
-TEST(lista_test, test_agregar_un_elemento_adelante) {
-    Lista l;
-    l.agregarAdelante(42);
-    ASSERT_EQ(l.longitud(), 1);
+TEST(lista_test, pushFront_test) {
+    List l;
+    l.pushFront(42);
+    ASSERT_EQ(l.length(), 1);
     ASSERT_EQ(l.iesimo(0), 42);
 }
 
-TEST(lista_test, test_agregar_un_elemento_atras) {
-    Lista l;
-    l.agregarAtras(42);
-    ASSERT_EQ(l.longitud(), 1);
+TEST(lista_test, pushBack_test) {
+    List l;
+    l.pushBack(42);
+    ASSERT_EQ(l.length(), 1);
     ASSERT_EQ(l.iesimo(0), 42);
 }
 
-TEST(lista_test, test_agregar_varios_elementos_solo_adelante) {
-    Lista l;
-    l.agregarAdelante(42);
-    l.agregarAdelante(41);
-    l.agregarAdelante(40);
-    l.agregarAdelante(39);
-    ASSERT_EQ(l.longitud(), 4);
+TEST(lista_test, push_several_front_test) {
+    List l;
+    l.pushFront(42);
+    l.pushFront(41);
+    l.pushFront(40);
+    l.pushFront(39);
+    ASSERT_EQ(l.length(), 4);
     ASSERT_EQ(l.iesimo(0), 39);
     ASSERT_EQ(l.iesimo(1), 40);
     ASSERT_EQ(l.iesimo(2), 41);
     ASSERT_EQ(l.iesimo(3), 42);
 }
 
-TEST(lista_test, test_agregar_varios_elementos_solo_atras) {
-    Lista l;
-    l.agregarAtras(42);
-    l.agregarAtras(43);
-    l.agregarAtras(44);
-    l.agregarAtras(45);
-    ASSERT_EQ(l.longitud(), 4);
+TEST(lista_test, push_several_back_test) {
+    List l;
+    l.pushBack(42);
+    l.pushBack(43);
+    l.pushBack(44);
+    l.pushBack(45);
+    ASSERT_EQ(l.length(), 4);
     ASSERT_EQ(l.iesimo(0), 42);
     ASSERT_EQ(l.iesimo(1), 43);
     ASSERT_EQ(l.iesimo(2), 44);
     ASSERT_EQ(l.iesimo(3), 45);
 }
 
-TEST(lista_test, test_agregar_varios_elementos_adelante_y_atras) {
-    Lista l;
-    l.agregarAdelante(42);
-    l.agregarAdelante(41);
-    l.agregarAtras(43);
-    l.agregarAdelante(40);
-    l.agregarAtras(44);
-    ASSERT_EQ(l.longitud(), 5);
+TEST(lista_test, push_several_front_back_test) {
+    List l;
+    l.pushFront(42);
+    l.pushFront(41);
+    l.pushBack(43);
+    l.pushFront(40);
+    l.pushBack(44);
+    ASSERT_EQ(l.length(), 5);
     ASSERT_EQ(l.iesimo(0), 40);
     ASSERT_EQ(l.iesimo(1), 41);
     ASSERT_EQ(l.iesimo(2), 42);
@@ -67,41 +61,41 @@ TEST(lista_test, test_agregar_varios_elementos_adelante_y_atras) {
     ASSERT_EQ(l.iesimo(4), 44);
 }
 
-TEST(lista_test, test_eliminar_elementos) {
-    Lista l;
-    l.agregarAtras(42);
-    l.agregarAtras(43);
-    l.agregarAtras(44);
-    l.agregarAtras(45);
+TEST(lista_test, remove_elements_test) {
+    List l;
+    l.pushBack(42);
+    l.pushBack(43);
+    l.pushBack(44);
+    l.pushBack(45);
 
-    l.eliminar(1);
+    l.remove(1);
 
-    ASSERT_EQ(l.longitud(), 3);
+    ASSERT_EQ(l.length(), 3);
     ASSERT_EQ(l.iesimo(0), 42);
     ASSERT_EQ(l.iesimo(1), 44);
     ASSERT_EQ(l.iesimo(2), 45);
 
-    l.eliminar(2);
+    l.remove(2);
 
-    ASSERT_EQ(l.longitud(), 2);
+    ASSERT_EQ(l.length(), 2);
     ASSERT_EQ(l.iesimo(0), 42);
     ASSERT_EQ(l.iesimo(1), 44);
 
-    l.eliminar(0);
-    l.eliminar(0);
+    l.remove(0);
+    l.remove(0);
 
-    ASSERT_EQ(l.longitud(), 0);
+    ASSERT_EQ(l.length(), 0);
 }
 
-TEST(lista_test, test_constructor_por_copia) {
-    Lista l;
-    l.agregarAtras(42);
-    l.agregarAtras(43);
-    l.agregarAtras(44);
-    l.agregarAtras(45);
+TEST(lista_test, constructor_by_copy) {
+    List l;
+    l.pushBack(42);
+    l.pushBack(43);
+    l.pushBack(44);
+    l.pushBack(45);
 
-    Lista otra(l);
-    ASSERT_EQ(otra.longitud(), 4);
+    List otra(l);
+    ASSERT_EQ(otra.length(), 4);
     ASSERT_EQ(otra.iesimo(0), 42);
     ASSERT_EQ(otra.iesimo(1), 43);
     ASSERT_EQ(otra.iesimo(2), 44);
@@ -112,15 +106,15 @@ TEST(lista_test, test_constructor_por_copia) {
     ASSERT_EQ(otra.iesimo(0), 42);
 }
 
-TEST(lista_test, test_operador_asignacion) {
-    Lista l;
-    l.agregarAtras(42);
-    l.agregarAtras(43);
-    l.agregarAtras(44);
-    l.agregarAtras(45);
+TEST(lista_test, asignation) {
+    List l;
+    l.pushBack(42);
+    l.pushBack(43);
+    l.pushBack(44);
+    l.pushBack(45);
 
-    Lista otra = l;
-    ASSERT_EQ(otra.longitud(), 4);
+    List otra = l;
+    ASSERT_EQ(otra.length(), 4);
     ASSERT_EQ(otra.iesimo(0), 42);
     ASSERT_EQ(otra.iesimo(1), 43);
     ASSERT_EQ(otra.iesimo(2), 44);
@@ -131,11 +125,11 @@ TEST(lista_test, test_operador_asignacion) {
     ASSERT_EQ(otra.iesimo(0), 42);
 
     // test pisar memoria preexistente
-    l.eliminar(0);
+    l.remove(0);
     otra = l;
-    ASSERT_EQ(otra.longitud(), 3);
+    ASSERT_EQ(otra.length(), 3);
 
-    otra = Lista();
-    ASSERT_EQ(otra.longitud(), 0);
+    otra = List();
+    ASSERT_EQ(otra.length(), 0);
 }
 
