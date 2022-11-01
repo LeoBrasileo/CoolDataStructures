@@ -201,3 +201,14 @@ TEST(set_test, test_stress) {
 	    ASSERT_FALSE(c.in(k));
     }
 }
+
+TEST(set_test, inorder_elements) {
+    Set<int> c;
+    c.insert(5);
+    c.insert(4);
+    c.insert(7);
+    c.insert(6);
+    c.insert(8);
+    vector<int> v = {4,5,6,7,8};
+    EXPECT_EQ(c.inorder_keys(), v);
+}

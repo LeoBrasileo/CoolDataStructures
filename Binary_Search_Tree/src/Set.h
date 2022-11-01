@@ -44,6 +44,8 @@ class Set
         // Muestra el conjunto.
         void show(std::ostream&) const;
 
+        vector<T> inorder_keys();
+
     private:
 
         struct Node
@@ -67,6 +69,7 @@ class Set
         T& _max(Node* act) const;
 
         void _inorder_tree_walk_search_next(Node* nodo, const T& clave);
+        void _inorder(Node* node, vector<T>*);
         T* _next;
 
         void recursiveDestruction(Node* act);

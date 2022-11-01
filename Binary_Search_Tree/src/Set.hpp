@@ -1,4 +1,6 @@
 
+#include "Set.h"
+
 template <class T>
 Set<T>::Set() : _root(nullptr), _next(nullptr) {}
 
@@ -172,5 +174,21 @@ int Set<T>::_cardinal(int count, Node* act) const {
 template <class T>
 void Set<T>::show(std::ostream&) const {
     assert(false);
+}
+
+template<class T>
+vector<T> Set<T>::inorder_keys() {
+    vector<T> res = vector<T>();
+    _inorder(_root, &res);
+    return res;
+}
+
+template<class T>
+void Set<T>::_inorder(Set::Node* node, vector<T>* keys) {
+    if (node != nullptr){
+        _inorder(node->leftNode, keys);
+        keys->push_back(node->value);
+        _inorder(node->rightNode, keys);
+    }
 }
 

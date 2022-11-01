@@ -281,7 +281,8 @@ CMakeFiles/correrTests.dir/tests/conjunto-tests.cpp.o: ../tests/conjunto-tests.c
   /usr/include/c++/11/bits/stream_iterator.h \
   /usr/include/assert.h \
   ../src/Set.h \
-  ../src/Set.hpp
+  ../src/Set.hpp \
+  ../src/Set.h
 
 
 ../src/Set.hpp:
